@@ -25,6 +25,11 @@ export default {
   components: {
     // draggable,
   },
+  computed: {
+    tmp() {
+      return this.$store.getters.tableData2;
+    },
+  },
   data() {
     return {
       draggableOptions: {
@@ -85,6 +90,7 @@ export default {
           });
         })
       );
+      console.log(this.$store.getters.tableData2);
       // console.log(this.tableData);
     },
   },

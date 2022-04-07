@@ -25,7 +25,7 @@
 import { draggabletable } from "@/directive/v-draggable.js";
 // import Sortable from "sortablejs";
 export default {
-  name: "CommonTable",
+  name: "VTable",
   directives: { draggabletable },
   data() {
     return {
