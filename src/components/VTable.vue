@@ -27,6 +27,11 @@ import { draggabletable } from "@/directive/v-draggable.js";
 export default {
   name: "VTable",
   directives: { draggabletable },
+  computed: {
+    tmp() {
+      return this.$store.getters.tableData;
+    },
+  },
   data() {
     return {
       draggableOptions: {
