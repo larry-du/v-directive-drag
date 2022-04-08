@@ -7,7 +7,7 @@ const draggabletable = {
     Sortable.create(el.querySelector(".el-table__body tbody"), {
       animation: binding.value.animation,
       onEnd: (evt) => {
-        const dragData = binding.instance.tmp;
+        const dragData = binding.instance.tableData;
         const dragItem = dragData.find((item, index) => index === evt.oldIndex);
         const newDragData = [
           ...dragData.slice(0, evt.oldIndex),
