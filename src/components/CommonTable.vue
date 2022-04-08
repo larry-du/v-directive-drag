@@ -17,14 +17,9 @@
 
 <script>
 import { draggabletable } from "@/directive/v-draggable.js";
-// import draggable from "@/plugins/draggable.js";
-// import Sortable from "sortablejs";
 export default {
   name: "CommonTable",
   directives: { draggabletable },
-  components: {
-    // draggable,
-  },
   computed: {
     tmp() {
       return this.$store.getters.tableData2;
@@ -39,46 +34,8 @@ export default {
         },
       },
       chooseData: [],
-      //   headers: ["date", "name", "address"],
-      tableData: [
-        {
-          date: "A",
-          //   name: "Tom",
-          //   address: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          date: "B",
-          //   name: "Tom",
-          //   address: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          date: "C",
-          //   name: "Tom",
-          //   address: "No. 189, Grove St, Los Angeles",
-        },
-        {
-          date: "D",
-          //   name: "Tom",
-          //   address: "No. 189, Grove St, Los Angeles",
-        },
-      ],
     };
   },
-  // mounted() {
-  //   this.$nextTick(() => {
-  //     const self = this;
-  //     Sortable.create(document.querySelector(".el-table__body tbody"), {
-  //       animation: 200,
-  //       onEnd: (evt) => {
-  //         console.log(this);
-  //         const targetItem = self.tableData.splice(evt.oldIndex, 1)[0];
-  //         // const targetItem = self.tableData[evt.oldIndex];
-  //         console.log(targetItem);
-  //         self.tableData.splice(evt.newIndex, 0, targetItem);
-  //       },
-  //     });
-  //   });
-  // },
   methods: {
     pickupData() {
       if (!this.chooseData.length) return;
@@ -90,8 +47,6 @@ export default {
           });
         })
       );
-      // console.log(this.$store.getters.tableData2);
-      // console.log(this.tableData);
     },
   },
 };

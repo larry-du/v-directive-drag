@@ -1,9 +1,8 @@
 <template>
   <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" />。 -->
-    <CommonTable />
+    <!-- <CommonTable /> -->
     <VTable></VTable>
+    <!-- <TransferTest></TransferTest> -->
   </div>
 </template>
 
@@ -12,12 +11,14 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 import CommonTable from "@/components/CommonTable.vue";
 import VTable from "@/components/VTable.vue";
+// import TransferTest from "@/components/TransferTest.vue";
 
 export default {
   name: "HomeView",
   components: {
-    CommonTable,
+    // CommonTable,
     VTable,
+    // TransferTest,
   },
 };
 </script>
