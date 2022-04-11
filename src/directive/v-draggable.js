@@ -1,6 +1,6 @@
 import Sortable from "sortablejs";
-import { default as deepClone } from "@/composable/deepClone";
-const draggabletable = {
+import { deepClone } from "@/composable";
+const vDraggableTable = {
   mounted(el, binding, vnode) {
     Sortable.create(el.querySelector(".el-table__body tbody"), {
       animation: binding.value.animation,
@@ -14,4 +14,4 @@ const draggabletable = {
   },
 };
 
-export { draggabletable };
+export default vDraggableTable;

@@ -5,7 +5,7 @@
       row-key="date"
       @selection-change="chooseData = $event"
       style="width: 100%"
-      v-draggabletable="{
+      v-draggable-table="{
         animation: 400,
         saveData: (data) => {
           this.$store.commit('tableData', data);
@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { draggabletable as vDraggabletable } from "@/directive/v-draggable.js";
+import { vDraggableTable } from "@/directive";
 import { toRefs, ref, defineProps, defineEmits } from "vue";
 import { useStore } from "vuex";
 // import { useRouter, useRoute } from "vue-router";

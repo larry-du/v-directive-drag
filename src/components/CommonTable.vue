@@ -4,7 +4,7 @@
     row-key="date"
     @selection-change="chooseData = $event"
     style="width: 100%"
-    v-draggabletable="draggableOptions"
+    v-draggable-table="draggableOptions"
   >
     <el-table-column type="selection" width="55" />
     <el-table-column prop="date" label="Date" />
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import { draggabletable } from "@/directive/v-draggable.js";
+import { vDraggableTable } from "@/directive";
 export default {
   name: "CommonTable",
-  directives: { draggabletable },
+  directives: { vDraggableTable },
   computed: {
     tableData() {
       return this.$store.getters.tableData2;

@@ -8,7 +8,7 @@
       ></VTable>
       <div
         class="sideSticky"
-        v-stickySidebar="{
+        v-stickysidebar="{
           topSpacing: 20,
           bottomSpacing: 20,
         }"
@@ -25,24 +25,11 @@
 
 <script setup>
 import { useStore } from "vuex";
-import { stickySidebar as vStickySidebar } from "@/directive/v-stickysidebar.js";
+import { vStickysidebar } from "@/directive";
 import { onMounted, nextTick } from "vue";
-// import StickySidebar from "sticky-sidebar-v2";
 import CommonTable from "@/components/CommonTable.vue";
 import VTable from "@/components/VTable.vue";
 const store = useStore();
-
-// onMounted(async () => {
-//   await nextTick(() => {
-//     new StickySidebar(".sideSticky", {
-//       topSpacing: 0,
-//       bottomSpacing: 0,
-//       containerSelector: ".box",
-//       innerWrapperSelector: ".inner",
-//     });
-//   });
-// });
-
 function pickupData({ currentTableData, chooseData }) {
   store.commit(
     "tableData",
@@ -60,6 +47,4 @@ p
   margin: 0
 .box
   display: flex
-// .inner
-//   height: 100px
 </style>

@@ -1,5 +1,5 @@
 import StickySidebar from "sticky-sidebar-v2";
-const stickySidebar = {
+const vStickysidebar = {
   mounted(el, binding, vnode) {
     new StickySidebar(el, {
       topSpacing: 0,
@@ -11,4 +11,4 @@ const stickySidebar = {
   },
 };
 
-export { stickySidebar };
+export default vStickysidebar;
